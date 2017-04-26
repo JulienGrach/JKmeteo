@@ -1,1 +1,3 @@
-var app = angular.module('appMeteo', ["ngCookies"]);
+var app = angular.module('appMeteo', ["ngCookies", "ngRoute"]);
+
+

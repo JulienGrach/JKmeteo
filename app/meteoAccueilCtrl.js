@@ -2,9 +2,6 @@ app.controller('meteoAccueilCtrl', ['$scope', '$http', '$cookies', function ($sc
 
 
 
-
-
-
     function readCityCookies(){
         var cookieValue = $cookies.get('cityRemember');
 
