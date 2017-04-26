@@ -217,3 +217,98 @@ height: 32px;
 display: flex;
 justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebarservices {
+  width: 100%;
+}
+.sidebarservices .head {
+    padding-left: 0 ;
+  text-align:center;
+  font-size:15pt;
+  background:gray;
+  color:white;
+}
+.head:hover {
+  background:gray !important;
+  cursor: initial;
+}
+.sidebarservices li {
+  list-style:none;
+  background-color:#0e6eb7;
+  margin:5px 0px;
+  text-align:left;
+  padding: 5px 0 5px 20px;
+  border-radius:5px 5px;
+  cursor:pointer;
+}
+.sidebarservices li a {
+  text-decoration:none;
+  color:white !important;
+    font-size:10pt;
+  font-family: Century Gothic, sans-serif;
+}
+.sidebarservices li:hover {
+  background:black;
+  color:black;
+}
+
+
+
+
+
+
+
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#D9230F;
+}
+
+.search-query:focus + button {
+    z-index: 3;
+}

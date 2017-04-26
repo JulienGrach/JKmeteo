@@ -21,19 +21,37 @@
 
       <div class="container" ng-controller="meteoAccueilCtrl">
 		  <div class="row">
-  			<div class="col-sm-offset-3 col-sm-6">
-  				<div id="card" class="weater">
-  					<div class="city-selected">
-  						<article>
 
-  							<div class="info">
-								<div class="city"><span>City:</span> {{meteo.city.name}} <span>({{meteo.city.country}})</span></div>
-  								<div class="night">{{meteo.list[i].dt_txt}}</div>
 
-  								<div class="temp">{{meteo.list[i].main.temp}}°</div>
 
-  								<div class="wind">
-  									<svg version="1.1" id="wind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			  <div class="col-md-3">
+				  <!--<ul class="sidebarservices">
+					  <li class="head">List of Services</li>
+					  <li><a href="#">Networking Services</a></li>
+					  <li><a href="#">Troubleshooting Services</a></li>
+					  <li><a href="#">Internet Services</a></li>
+					  <li><a href="#">Server Services</a></li>
+					  <li><a href="#">Menu Item</a></li>
+					  <li><a href="#">PC & Printer Repair Services</a></li>
+					  <li><a href="#">And more...</a></li>
+				  </ul>-->
+			  </div>
+
+
+
+			  <div class="col-sm-6">
+				  <div id="card" class="weater">
+					  <div class="city-selected">
+						  <article>
+
+							  <div class="info">
+								  <div class="city"><span>City:</span> {{meteo.city.name}} <span>({{meteo.city.country}})</span></div>
+								  <div class="night">{{meteo.list[i].dt_txt}}</div>
+
+								  <div class="temp">{{meteo.list[i].main.temp}}°</div>
+
+								  <div class="wind">
+									  <svg version="1.1" id="wind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   										 viewBox="0 0 300.492 300.492" style="enable-background:new 0 0 300.492 300.492;" xml:space="preserve">
   									<g>
   										<g>
@@ -67,24 +85,24 @@
   									</g>
 
   									<span>{{meteo.list[i].wind.speed}} km/h</span>
-  								</div>
-  							</div>
+								  </div>
+							  </div>
 
-  							<div class="icon">
-  								<img ng-src="http://openweathermap.org/img/w/{{meteo.list[i].weather[0].icon}}.png" alt="icon of meteo">
-  							</div>
+							  <div class="icon">
+								  <img ng-src="http://openweathermap.org/img/w/{{meteo.list[i].weather[0].icon}}.png" alt="icon of meteo">
+							  </div>
 
-  						</article>
+						  </article>
 
-  						<figure style="background-image: url(http://136.243.1.253/~creolitic/bootsnipp/home.jpg)"></figure>
-  					</div>
+						  <figure style="background-image: url(http://136.243.1.253/~creolitic/bootsnipp/home.jpg)"></figure>
+					  </div>
 
-  					<div class="days">
-  						<div class="row row-no-gutter">
-  							<div class="col-md-4">
-  								<div class="day" ng-click="today()">
-  									<h1>Today</h1>
-  									<svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.077 59.077" style="enable-background:new 0 0 59.077 59.077;" xml:space="preserve">
+					  <div class="days">
+						  <div class="row row-no-gutter">
+							  <div class="col-md-4">
+								  <div class="day" ng-click="today()">
+									  <h1>Today</h1>
+									  <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.077 59.077" style="enable-background:new 0 0 59.077 59.077;" xml:space="preserve">
   										<g>
   											<path d="M55.906,28.463c-0.235,0.129-0.469,0.258-0.711,0.379c-11.339,5.68-25.186,1.072-30.864-10.268
   												C21.8,13.517,21.22,7.726,22.699,2.268L23.315,0l-2.061,1.129C9.807,7.402,5.107,21.605,10.554,33.464
@@ -110,13 +128,13 @@
   												c0.276-0.479,0.112-1.09-0.366-1.366l-2.83-1.634l2.83-1.634C22.749,51.167,22.913,50.556,22.637,50.077z"></path>
   										</g>
   									</svg>
-  								</div>
-  							</div>
+								  </div>
+							  </div>
 
-  							<div class="col-md-4">
-  								<div class="day" ng-click="tomorrow()">
-  									<h1>Tomorrow</h1>
-  									<svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.077 59.077" style="enable-background:new 0 0 59.077 59.077;" xml:space="preserve">
+							  <div class="col-md-4">
+								  <div class="day" ng-click="tomorrow()">
+									  <h1>Tomorrow</h1>
+									  <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.077 59.077" style="enable-background:new 0 0 59.077 59.077;" xml:space="preserve">
   										<g>
   											<path d="M55.906,28.463c-0.235,0.129-0.469,0.258-0.711,0.379c-11.339,5.68-25.186,1.072-30.864-10.268
   												C21.8,13.517,21.22,7.726,22.699,2.268L23.315,0l-2.061,1.129C9.807,7.402,5.107,21.605,10.554,33.464
@@ -142,13 +160,13 @@
   												c0.276-0.479,0.112-1.09-0.366-1.366l-2.83-1.634l2.83-1.634C22.749,51.167,22.913,50.556,22.637,50.077z"></path>
   										</g>
   									</svg>
-  								</div>
-  							</div>
+								  </div>
+							  </div>
 
-  							<div class="col-md-4">
-  								<div class="day" ng-click="afterTomorrow()">
-  									<h1>After-Tomorrow</h1>
-  									<svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.077 59.077" style="enable-background:new 0 0 59.077 59.077;" xml:space="preserve">
+							  <div class="col-md-4">
+								  <div class="day" ng-click="afterTomorrow()">
+									  <h1>After-Tomorrow</h1>
+									  <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.077 59.077" style="enable-background:new 0 0 59.077 59.077;" xml:space="preserve">
   										<g>
   											<path d="M55.906,28.463c-0.235,0.129-0.469,0.258-0.711,0.379c-11.339,5.68-25.186,1.072-30.864-10.268
   												C21.8,13.517,21.22,7.726,22.699,2.268L23.315,0l-2.061,1.129C9.807,7.402,5.107,21.605,10.554,33.464
@@ -174,25 +192,44 @@
   												c0.276-0.479,0.112-1.09-0.366-1.366l-2.83-1.634l2.83-1.634C22.749,51.167,22.913,50.556,22.637,50.077z"></path>
   										</g>
   									</svg>
-  								</div>
-  							</div>
+								  </div>
+							  </div>
 
-  						</div>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+
+
+              <div class="col-md-3">
+                  <ul class="sidebarservices">
+                      <li class="head">Last Search</li>
+                      <li ng-repeat="element in cookies track by $index" ng-click="chercher(element)"><a>{{element}}</a></li>
+                  </ul>
+              </div>
+
+
+		  </div>
       <div class="row">
-		  <form class="formulaire col-sm-offset-4 col-sm-4" action="index.html" method="post">
-			  <input ng-model="cityUser" class="" type="text" name="" value="">
-			  <button ng-click = "chercher()" type="button" name="button">Localisation</button>
-		  </form>
+
+          <div id="custom-search-input">
+              <form ng-submit="chercher(cityUser); cityUser= null" class="input-group col-md-offset-4 col-md-4">
+                  <input ng-model="cityUser" type="text" class="  search-query form-control" placeholder="Search" />
+                  <span class="input-group-btn">
+                      <button  class="btn btn-danger" type="submit">
+                        <span class=" glyphicon glyphicon-search"></span>
+                      </button>
+                  </span>
+              </form>
+          </div>
+
       </div>
       
     </div>
 
 	  <script src="../bower_components/angular/angular.js"></script>
 	  <script src="../bower_components/angular-route/angular-route.js"></script>
+	  <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
 	  <script src="../bower_components/jquery/dist/jquery.js"></script>
 	  <script src="app.js"></script>
 	  <script src="meteoAccueilCtrl.js"></script>
