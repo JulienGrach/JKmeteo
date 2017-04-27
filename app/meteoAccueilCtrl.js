@@ -5,7 +5,9 @@ app.controller('meteoAccueilCtrl', ['$scope', '$http', '$cookies', function ($sc
     function readCityCookies(){
         var cookieValue = $cookies.get('cityRemember');
 
-        if(cookieValue != undefined){
+        if(!cookieValue){
+            result = false;
+        }else{
             var uniqValue = cookieValue.split(',');
             var i=0;
             var result = 0;
@@ -15,18 +17,15 @@ app.controller('meteoAccueilCtrl', ['$scope', '$http', '$cookies', function ($sc
             }
 
             result = {number : i, cities : uniqValue};
-        }else{
-            result = false;
         }
 
         return result
     }
 
-
     function writeCityCookies(cityObject, value){
 
         if(!cityObject){
-            var cityObject = {number : 1, cities : value};
+            cityObject = {number : 1, cities : value};
         }else{
 
             if(cityObject.number <= 5){
@@ -47,12 +46,8 @@ app.controller('meteoAccueilCtrl', ['$scope', '$http', '$cookies', function ($sc
 
 
 
-
-
     $scope.i = 0;
     $scope.cookies = readCityCookies().cities;
-
-
 
 
 
@@ -67,9 +62,6 @@ app.controller('meteoAccueilCtrl', ['$scope', '$http', '$cookies', function ($sc
     };
 
 
-
-
-
     $scope.today = function () {
         $scope.i = 0;
     };
@@ -81,8 +73,6 @@ app.controller('meteoAccueilCtrl', ['$scope', '$http', '$cookies', function ($sc
     $scope.afterTomorrow = function () {
         $scope.i = 16;
     };
-
-
 }]);
 
 
